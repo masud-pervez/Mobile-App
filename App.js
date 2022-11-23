@@ -40,7 +40,8 @@ export default function App() {
           tabBarActiveTintColor: "#fff",
           tabBarActiveBackgroundColor: "#9E1D22",
           tabBarInactiveBackgroundColor: "#B8222B",
-          tabBarStyle: { height: 65 },
+          tabBarStyle: {height: 65},
+          tabBarLabelStyle: { marginBottom: 15 },
         })}
       >
         <Tab.Screen name="Home" component={HomeC} />

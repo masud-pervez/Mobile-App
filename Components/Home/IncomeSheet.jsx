@@ -1,10 +1,19 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-export default function IncomeExpence() {
+export default function IncomeSheet() {
   return (
-    <View style={style.container}>
-      <View style={style.card}>
+    <View>
+      {/* <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "space-between",
+          textAlign: "center",
+          backgroundColor: "#FEF2F2",
+          borderRadius: 10,
+        }}
+      >
         <View style={style.cardItem}>
           <Text style={style.cardHead1}>
             আজকের বেচা <Text style={{ fontWeight: "bold" }}>০</Text>
@@ -31,7 +40,8 @@ export default function IncomeExpence() {
             </Text>
           </View>
         </View>
-      </View>
+      </View> */}
+      <Text>Tuhin</Text>
     </View>
   );
 }
