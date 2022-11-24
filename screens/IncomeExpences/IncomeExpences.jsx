@@ -1,10 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { SafeAreaView, ScrollView, View } from "react-native";
+import IncomeListHead from "../../Components/IncomeExpense/IncomeListHead";
+import IncomeLists from "../../Components/IncomeExpense/IncomeLists";
+import IncomeSheet from "../../Components/IncomeExpense/IncomeSheet";
+import StatusBar from "../../Components/IncomeExpense/StatusBar";
 
 export default function IncomeExpences() {
   return (
-    <View>
-      <Text>IncomeExpences</Text>
-    </View>
-  )
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+      <IncomeSheet />
+      <StatusBar />
+      <IncomeListHead />
+      <IncomeLists />
+    </SafeAreaView>
+  );
 }

@@ -22,8 +22,8 @@ export default function CustomerHead() {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
-          width: "75%",
+          justifyContent: "space-evenly",
+          width: "68%",
         }}
       >
         <TouchableOpacity
@@ -31,8 +31,6 @@ export default function CustomerHead() {
             backgroundColor: "#F3F7FA",
             padding: 10,
             borderRadius: 50,
-            borderColor: "#EFEFEF",
-            borderWidth: "0.5px",
           }}
         >
           <Feather name="download" size={20} />

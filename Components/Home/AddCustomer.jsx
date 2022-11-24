@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-export default function AddCustomer() {
+export default function AddCustomer({props}) {
 
   return (
     <View
@@ -11,7 +11,7 @@ export default function AddCustomer() {
         position: "absolute",
         right: 25,
         bottom: 0,
-        top: "78%",
+        top: "85%",
       }}
     >
       <TouchableOpacity
@@ -37,6 +37,7 @@ export default function AddCustomer() {
           কাস্টমার যোগ করি
         </Text>
       </TouchableOpacity>
+      
     </View>
   );
 }

@@ -1,10 +1,119 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import React from "react";
+import Addmoney from "../../assets/wallet/addmoney";
+import CashOut from "../../assets/wallet/cashout";
+import ColectionIcon from "../../assets/wallet/colectionIcon";
+import Sendmoney from "../../assets/wallet/sendmoney";
+import Suplier from "../../assets/wallet/suplier";
+import Flaxiload from "../../assets/wallet/flaxiload";
 
 export default function Wallet() {
   return (
-    <View>
-      <Text>Wallet</Text>
+    <View
+      style={{
+        flexDirection: "column",
+        justifyContent: "space-around",
+        backgroundColor: "#fff",
+        marginTop: 1,
+      }}
+    >
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <TouchableOpacity
+          activeOpacity={0.4}
+          style={{
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <ColectionIcon />
+          <Text style={{ fontWeight: "700", marginBottom: 10, paddingTop: 1 }}>
+            কালেকশন
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.4}
+          style={{
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Flaxiload />
+          <Text style={{ fontWeight: "700", marginBottom: 10, paddingTop: 1 }}>
+            মোবাইল রিচাজ
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.4}
+          style={{
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Suplier />
+          <Text style={{ fontWeight: "700", marginBottom: 10, paddingTop: 1 }}>
+            সাপ্নায়ার পেমেন্ট
+          </Text>
+        </TouchableOpacity>
+      </View>
+
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <TouchableOpacity
+          activeOpacity={0.4}
+          style={{
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <CashOut />
+          <Text style={{ fontWeight: "700", marginBottom: 10, paddingTop: 1 }}>
+            মানি আউট
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.4}
+          style={{
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            marginRight: 10,
+          }}
+        >
+          <Addmoney />
+          <Text style={{ fontWeight: "700", marginBottom: 10, paddingTop: 1 }}>
+            অ্যাড মানি{" "}
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.4}
+          style={{
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            marginRight: 15,
+          }}
+        >
+          <Sendmoney />
+          <Text style={{ fontWeight: "700", marginBottom: 10, paddingTop: 1 }}>
+            সেন্ড মানি
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
-  )
+  );
 }

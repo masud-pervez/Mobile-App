@@ -6,20 +6,6 @@ export default function CustomerDetails() {
   return (
     <View>
       <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
-      <Details />
     </View>
   );
 }

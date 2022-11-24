@@ -35,12 +35,12 @@ export default function App() {
           },
           headerTitle: (props) => <HeaderTitle {...props} />,
           headerRight: (props) => <LogoTitle {...props} />,
-          tabBarActiveTintColor: "tomato",
+          tabBarHideOnKeyboard: true,
           tabBarInactiveTintColor: "#fff",
           tabBarActiveTintColor: "#fff",
           tabBarActiveBackgroundColor: "#9E1D22",
           tabBarInactiveBackgroundColor: "#B8222B",
-          tabBarStyle: {height: 65},
+          tabBarStyle: { height: 65 },
           tabBarLabelStyle: { marginBottom: 15 },
         })}
       >

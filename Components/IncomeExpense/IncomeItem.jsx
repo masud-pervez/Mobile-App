@@ -1,13 +1,15 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
-export default function Details() {
+export default function IncomeItem({ data }) {
+  console.log(data);
   return (
     <View
       style={{
         backgroundColor: "#fff",
-        paddingHorizontal: 12,
+        paddingHorizontal: 15,
       }}
     >
       <View
@@ -18,7 +20,7 @@ export default function Details() {
           borderBottomColor: "#C5C5C5",
           borderStyle: "dashed",
           alignItems: "center",
-          paddingVertical: 14,
+          paddingVertical: 10,
           width: "100%",
         }}
       >
@@ -32,16 +34,18 @@ export default function Details() {
         >
           <View
             style={{
-              backgroundColor: "#005A99",
-              padding: 15,
+              backgroundColor: `${data.iconcolor}`,
+              padding: 12,
               borderRadius: 50,
             }}
           >
-            <Text style={{ fontSize: 18, color: "#fff", fontWeight: "bold" }}>
-              Ru
-            </Text>
+            <FontAwesome5
+              name="hand-holding-water"
+              color={data.color}
+              size={25}
+            />
           </View>
-          <Text style={{ fontSize: 18, marginLeft: 10 }}>Ruhits</Text>
+          <Text style={{ fontSize: 18, marginLeft: 10 }}>{data.title}</Text>
         </View>
         <TouchableOpacity
           activeOpacity={0.5}
@@ -53,11 +57,11 @@ export default function Details() {
           }}
         >
           <Text
-            style={{ color: "#75463E", fontWeight: "bold", marginRight: 10 }}
+            style={{ color: data.color, fontWeight: "bold", marginRight: 10 }}
           >
-            ১১০০.০০
+            {data.amount === 0 ? "০.০০" : data.amount}
           </Text>
-          <MaterialIcons name="arrow-forward-ios" color={"#75463E"} size={12} />
+          <MaterialIcons name="arrow-forward-ios" size={12} />
         </TouchableOpacity>
       </View>
     </View>

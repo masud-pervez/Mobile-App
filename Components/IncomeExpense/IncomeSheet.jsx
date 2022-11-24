@@ -5,48 +5,33 @@ export default function IncomeSheet() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <View style={styles.cardItem1}>
-          <View style={styles.header}>
-            <Text>আজকের বেচা</Text>
-            <Text style={{ marginLeft: 7, fontWeight: "900" }}>০</Text>
-          </View>
-          <Text style={{ color: "#F1D7D8", fontSize: 30, fontWeight: "900" }}>
-            |
-          </Text>
-          <View style={styles.header}>
-            <Text>বর্তমান ক্যাশ</Text>
-            <Text style={{ marginLeft: 7, fontWeight: "900" }}>৪০০</Text>
-          </View>
-        </View>
-
         <View style={styles.cardItem2}>
           <View style={styles.body}>
             <View style={{ padding: 10 }}>
-              <Text>মোট পাবো</Text>
+              <Text style={{color:"#837247"}}>আজকের বেচা</Text>
               <Text
                 style={{
-                  color: "#952D2C",
                   fontWeight: "bold",
                   fontSize: 20,
                   textAlign: "center",
                   marginTop: 8,
                 }}
               >
-                ১,১০০
+               ০
               </Text>
             </View>
           </View>
-          {/* <Text
+          <Text 
             style={{
-              color: "#F1D7D8",
-              fontSize: 30,
+              color: "#F2C880",
+              fontSize: 20,
               fontWeight: "300",
               marginTop: 15,
-              marginRight: 1,
+              // marginRight: ,
             }}
           >
             |
-          </Text> */}
+          </Text>
           <View style={styles.body}>
             <View
               style={{
@@ -55,19 +40,31 @@ export default function IncomeSheet() {
                 justifyContent: "center",
               }}
             >
-              <Text>মোট দেবো</Text>
+              <Text>বর্তমান ক্যাশ</Text>
               <Text
                 style={{
-                  color: "#53B96D",
                   fontWeight: "bold",
                   fontSize: 20,
                   textAlign: "center",
                   marginTop: 8,
                 }}
               >
-                ০
+                ৪০০
               </Text>
             </View>
+          </View>
+        </View>
+        <View style={styles.cardItem1}>
+          <View style={styles.header}>
+            <Text>আজকে পেলাম</Text>
+            <Text style={{color:"#53B96D",marginLeft: 7, fontWeight: "900" }}>০</Text>
+          </View>
+          <Text style={{ color: "#F2C880", fontSize: 20, fontWeight: "900" }}>
+            |
+          </Text>
+          <View style={styles.header}>
+            <Text>আজকে দিলাম</Text>
+            <Text style={{ color: "#952D2C",marginLeft: 7, fontWeight: "900" }}>০</Text>
           </View>
         </View>
       </View>
@@ -84,7 +81,7 @@ const styles = StyleSheet.create({
   card: {
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "#FEF2F2",
+    backgroundColor: "#FCE5A2",
     borderRadius: 10,
     width: "100%",
   },
@@ -92,9 +89,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    borderTopRightRadius: 10,
-    borderTopLeftRadius: 10,
-    backgroundColor: "#F8DEDF",
+    borderBottomRightRadius: 10,
+    borderBottomLeftRadius: 10,
+    backgroundColor: "#FCF6D6",
   },
   header: {
     padding: 10,
