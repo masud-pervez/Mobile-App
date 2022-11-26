@@ -1,10 +1,9 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+import { IncomeIn, IncomeOut } from "../../assets/wallet";
 
-export default function IncomeItem({ data }) {
-  console.log(data);
+export default function CashboxItem({ data }) {
   return (
     <View
       style={{
@@ -39,11 +38,7 @@ export default function IncomeItem({ data }) {
               borderRadius: 50,
             }}
           >
-            <FontAwesome5
-              name="hand-holding-water"
-              color={data.color}
-              size={25}
-            />
+            {data.credit ? <IncomeIn /> : <IncomeOut />}
           </View>
           <Text style={{ fontSize: 18, marginLeft: 10 }}>{data.title}</Text>
         </View>

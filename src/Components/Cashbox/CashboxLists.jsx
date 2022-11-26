@@ -1,13 +1,13 @@
 import { View, Text, ScrollView, FlatList } from "react-native";
 import React from "react";
-import IncomeItem from "./IncomeItem";
+import CashboxItem from "./CashboxItem";
 
-export default function IncomeLists() {
+export default function CashboxLists() {
   return (
     <View>
       <FlatList
         data={data}
-        renderItem={({item}) => <IncomeItem key={item.id} data={item} />}
+        renderItem={({ item }) => <CashboxItem key={item.id} data={item} />}
         keyExtractor={(item) => item.id}
       />
     </View>
@@ -15,12 +15,12 @@ export default function IncomeLists() {
 }
 
 const data = [
-
   {
     id: 1,
     title: "ক্যাশ বেচা",
     amount: 0.0,
     iconcolor: "#DCF3E1",
+    credit: true,
     color: "#52C066",
   },
   {
@@ -28,6 +28,7 @@ const data = [
     title: "ক্যাশ কেনা",
     amount: "১,১০০",
     iconcolor: "#F6B6BD",
+    credit: false,
     color: "#A6293E",
   },
   {
@@ -35,6 +36,7 @@ const data = [
     title: "খরচ",
     amount: 0.0,
     iconcolor: "#F6B6BD",
+    credit: false,
     color: "#A6293E",
   },
   {
@@ -42,6 +44,7 @@ const data = [
     title: "মালিক দিল",
     amount: 0.0,
     iconcolor: "#DCF3E1",
+    credit: true,
     color: "#52C066",
   },
   {
@@ -49,6 +52,7 @@ const data = [
     title: "মালিক নিল",
     amount: 0.0,
     iconcolor: "#F6B6BD",
+    credit: false,
     color: "#A6293E",
   },
 ];

@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-export default function IncomeListHead() {
+export default function CashboxHead() {
   return (
     <View
       style={{
