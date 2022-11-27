@@ -1,9 +1,11 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
+import { Button } from "react-native";
+import { DrawerActions } from "@react-navigation/native";
 
 export default function Drawer() {
   return (
-    <View>
-    </View>
-  )
+    <Button  title="open"/>
+
+  );
 }

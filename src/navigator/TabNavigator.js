@@ -1,17 +1,19 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { DrawerActions } from "@react-navigation/native";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import routes from "../constants/routes";
 
 //?Components
-import { Talybook, Drawer, Wallet, CashBox } from "../screens";
-const { CashBox_Tab, Drawer_TAB, Wallet_Tab, TalyBook_TAB } = routes;
+import { Talybook, Wallet, CashBox } from "../screens";
+const { CashBox_Tab, Drawer, Wallet_Tab, TalyBook_TAB } = routes;
 import { HeaderTitle, HeaderLogo } from "../Components/header";
-import DrawerNavigator from "./DrawerNavigator";
+import StackNavigator from "./StackNavigator";
 
-const Tab = createBottomTabNavigator();
 
-export default function TabNavigator() {
+
+export default function TabNavigator({ navigation }) {
+  const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -19,14 +21,24 @@ export default function TabNavigator() {
           let iconName;
           if (route.name === TalyBook_TAB) {
             iconName = focused ? "book" : "book";
+            return <AntDesign name={iconName} size={size} color={color} />;
           } else if (route.name === CashBox_Tab) {
             iconName = focused ? "inbox" : "inbox";
+            return <AntDesign name={iconName} size={size} color={color} />;
           } else if (route.name === Wallet_Tab) {
             iconName = focused ? "wallet" : "wallet";
-          } else if (route.name === Drawer_TAB) {
+            return <AntDesign name={iconName} size={size} color={color} />;
+          } else if (route.name === Drawer) {
             iconName = focused ? "menuunfold" : "menufold";
+            return (
+              <AntDesign
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
+                name={iconName}
+                size={size}
+                color={color}
+              />
+            );
           }
-          return <AntDesign name={iconName} size={size} color={color} />;
         },
         headerTitle: (props) => <HeaderTitle {...props} />,
         headerRight: (props) => <HeaderLogo {...props} />,
@@ -42,7 +54,7 @@ export default function TabNavigator() {
       <Tab.Screen name={routes.TalyBook_TAB} component={Talybook} />
       <Tab.Screen name={routes.CashBox_Tab} component={CashBox} />
       <Tab.Screen name={routes.Wallet_Tab} component={Wallet} />
-      {/* <Tab.Screen name={routes.Drawer_TAB} component={DrawerNavigator} /> */}
+      <Tab.Screen name={routes.Drawer} component={StackNavigator} />
     </Tab.Navigator>
   );
 }

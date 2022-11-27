@@ -1,17 +1,22 @@
-import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { Talybook, Wallet, CashBox } from "../screens";
-import routes from "../constants/routes";
-
-const Drawer = createDrawerNavigator();
-const { CashBox_DRAWER, TalyBook_DRAWER, Wallet_DRAWER } = routes;
+import TabNavigator from "./TabNavigator";
+import CustomDrawer from "./CustomDrawer";
 
 export default function DrawerNavigator() {
+  const Drawer = createDrawerNavigator();
   return (
-    <Drawer.Navigator initialRouteName="TalyBook_DRAWER">
-      <Drawer.Screen name={TalyBook_DRAWER} component={Talybook} />
-      <Drawer.Screen name={CashBox_DRAWER} component={CashBox} />
-      <Drawer.Screen name={Wallet_DRAWER} component={Wallet} />
+    <Drawer.Navigator
+      drawerContent={(props) => <CustomDrawer {...props} />}
+      screenOptions={{
+        headerShown: false,
+        drawerPosition: "right",
+        drawerStatusBarAnimation: "fade",
+        drawerLabelStyle: {
+          marginRight: -25,
+        },
+      }}
+    >
+      <Drawer.Screen name="tab" component={TabNavigator} />
     </Drawer.Navigator>
   );
 }

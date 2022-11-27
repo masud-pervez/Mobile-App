@@ -1,19 +1,31 @@
 export default {
-  // LOGIN: 'Login',
-  // REGISTER: 'Register',
-  // FORGOT_PASSWORD: 'Forgot Password',
-
-  TalyBook: 'TalyBook',
-  TalyBook_TAB: 'টালি',
-  TalyBook_DRAWER: 'TalyBook Drawer',
-
+  // ? Tabar Manu
   CashBox: "CashBox",
-  CashBox_Tab: "ক্যাশবক্স",
-  CashBox_DRAWER: "CashBox Drawer",
-
+  TalyBook: "TalyBook",
   Wallet: "Wallet",
+  CashBox_Tab: "ক্যাশবক্স",
   Wallet_Tab: "ওয়ালেট",
-  Wallet_DRAWER: "Wallet Drawer",
+  TalyBook_TAB: "টালি",
 
-  Drawer_TAB: "মেন্যু"
-}
+  // ! Drawer manu
+  Drawer: "মেন্যু",
+  Wallet_DRAWER: "Wallet_Drawer",
+  CashBox_DRAWER: "CashBoxDrawer",
+  TalyBook_DRAWER: "TalyBook_Drawer",
+
+  // ? Sidebar Routes
+  Reports_Title: "খাতা রিপোর্ট",
+  SellBuy_Reports: "বেচা-কিনা",
+  Expence_Reports: "খরচ",
+  Due_Reports: "বাকি হিসাব",
+  Cash_Reports: "ক্যাশ হিসাব",
+  InchargeHead_Reports: "মালিকের রিপোর্ট",
+  Others: "অন্যান্য",
+  BackupData: "ডাটা ব্যাকআপ",
+  Sending_Reports: "তাগাদা পাঠাই",
+  Settings_Label: "সেটিংস",
+  Refearal: "রেফার করুন",
+  Buy_Message: "টালি মেসেজ কিনি",
+  LogOut: "লগ আউট",
+  Verson: "ভার্সন - ৫.০.৪",
+};
