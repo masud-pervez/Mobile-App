@@ -7,11 +7,10 @@ import Entypo from "react-native-vector-icons/Entypo";
 
 import { Text, View } from "react-native";
 import routes from "../constants/routes";
-import { useNavigation } from '@react-navigation/native';
-
+import { useNavigation } from "@react-navigation/native";
+import { LogoTaly } from "../assets/wallet";
 
 export default function CustomDrawer(props) {
-
   const navigation = useNavigation();
   return (
     <DrawerContentScrollView {...props}>
@@ -133,7 +132,6 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <Entypo name="back-in-time" size={20} />}
-          
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -210,7 +208,9 @@ export default function CustomDrawer(props) {
           paddingHorizontal: 22,
         }}
       >
-        <Text>Logo</Text>
+        <Text>
+          <LogoTaly />
+        </Text>
         <Text>{routes.Verson}</Text>
       </View>
     </DrawerContentScrollView>

@@ -1,11 +1,14 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import Addmoney from "../../assets/wallet/addmoney";
-import CashOut from "../../assets/wallet/cashout";
-import ColectionIcon from "../../assets/wallet/colectionIcon";
-import Sendmoney from "../../assets/wallet/sendmoney";
-import Suplier from "../../assets/wallet/suplier";
-import Flaxiload from "../../assets/wallet/flaxiload";
+import {
+  Addmoney,
+  CashOut,
+  ColectionIcon,
+  Sendmoney,
+  Flaxiload,
+  Suplier,
+  LogoTaly,
+} from "../../assets/wallet";
 
 export default function Wallet() {
   return (
@@ -13,15 +16,34 @@ export default function Wallet() {
       style={{
         flexDirection: "column",
         justifyContent: "space-around",
-        backgroundColor: "#fff",
         marginTop: 1,
       }}
     >
       <View
         style={{
           flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+          paddingHorizontal: 20,
+          elevation: 1,
+          backgroundColor: "#fff",
+          marginTop: 1,
+        }}
+      >
+        <View>
+          <LogoTaly width={130} height={70} />
+        </View>
+        <View>
+          <Text>একাউন্ট ব্যালেন্স</Text>
+        </View>
+      </View>
+
+      <View
+        style={{
+          flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
+          backgroundColor: "#fff",
         }}
       >
         <TouchableOpacity
@@ -70,6 +92,7 @@ export default function Wallet() {
           flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
+          backgroundColor: "#fff",
         }}
       >
         <TouchableOpacity
