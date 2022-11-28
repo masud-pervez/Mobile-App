@@ -24,3 +24,8 @@ export { default as ExpenceReports } from "./sidebar/ExpenceReports";
 export { default as SellBuyReports } from "./sidebar/SellBuyReports";
 export { default as SendingReports } from "./sidebar/SendingReports";
 export { default as InchargeHeadReports } from "./sidebar/InchargeHeadReports";
+
+//? Main Component
+export { default as Inbox } from "./main/Inbox";
+export { default as Help } from "./main/Help";
+export { default as Add_Customer } from "./main/Add_Customer";

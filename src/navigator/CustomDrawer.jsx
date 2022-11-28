@@ -60,6 +60,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <Icons name="tag-multiple-outline" size={20} />}
+          onPress={() => navigation.navigate(routes.SellBuy_Reports)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -71,6 +72,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <Icons name="archive-arrow-up-outline" size={20} />}
+          onPress={() => navigation.navigate(routes.Expence_Reports)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -82,6 +84,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <Icons name="book-outline" size={20} />}
+          onPress={() => navigation.navigate(routes.Due_Reports)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -93,6 +96,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <AntDesign name="inbox" size={20} />}
+          onPress={() => navigation.navigate(routes.Cash_Reports)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -104,6 +108,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <FontAwesome name="user-o" size={20} />}
+          onPress={() => navigation.navigate(routes.InchargeHead_Reports)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -128,11 +133,12 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <Entypo name="back-in-time" size={20} />}
+          
           style={{
             paddingVertical: 0,
             marginBottom: 0,
           }}
-          onPress={() => navigation.navigate(routes.Due_Reports)}
+          onPress={() => navigation.navigate(routes.BackupData)}
         />
         <DrawerItem
           label={routes.Sending_Reports}
@@ -140,6 +146,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <AntDesign name="bells" size={20} />}
+          onPress={() => navigation.navigate(routes.Sending_Reports)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -151,6 +158,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <AntDesign name="message1" size={20} />}
+          onPress={() => navigation.navigate(routes.Buy_Message)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -162,6 +170,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <AntDesign name="setting" size={20} />}
+          onPress={() => navigation.navigate(routes.Settings_Label)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,
@@ -173,6 +182,7 @@ export default function CustomDrawer(props) {
             marginLeft: -25,
           }}
           icon={() => <AntDesign name="sharealt" size={20} />}
+          onPress={() => navigation.navigate(routes.Refearal)}
           style={{
             paddingVertical: 0,
             marginBottom: 0,

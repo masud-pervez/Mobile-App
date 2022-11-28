@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function CashReports() {
   return (
-    <View>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>CashReports</Text>
     </View>
   )

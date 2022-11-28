@@ -1,9 +1,11 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { useNavigation } from "@react-navigation/native";
+import routes from "../../constants/routes";
 
-export default function AddCustomer({props}) {
-
+export default function AddCustomer({ props }) {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -15,6 +17,7 @@ export default function AddCustomer({props}) {
       }}
     >
       <TouchableOpacity
+        onPress={() => navigation.navigate(routes.AddCustomer)}
         activeOpacity={0.8}
         style={{
           backgroundColor: "#B8222B",
@@ -37,7 +40,6 @@ export default function AddCustomer({props}) {
           কাস্টমার যোগ করি
         </Text>
       </TouchableOpacity>
-      
     </View>
   );
 }

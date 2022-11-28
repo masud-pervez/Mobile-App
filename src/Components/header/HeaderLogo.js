@@ -1,10 +1,14 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 //?Icons
 import AntDesign from "react-native-vector-icons/AntDesign";
+import routes from "../../constants/routes";
 
 export default function HeaderLogo() {
+  const navigation = useNavigation();
+
   return (
     <View
       style={{
@@ -14,6 +18,7 @@ export default function HeaderLogo() {
       }}
     >
       <TouchableOpacity
+        onPress={() => navigation.navigate(routes.Inbox)}
         style={{
           marginRight: 12,
           flexDirection: "column",
@@ -24,6 +29,7 @@ export default function HeaderLogo() {
         <Text>ইনবক্স</Text>
       </TouchableOpacity>
       <TouchableOpacity
+        onPress={() => navigation.navigate(routes.Help)}
         style={{
           marginRight: 12,
           flexDirection: "column",

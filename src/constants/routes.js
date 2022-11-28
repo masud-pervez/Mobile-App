@@ -28,4 +28,9 @@ export default {
   Buy_Message: "টালি মেসেজ কিনি",
   LogOut: "লগ আউট",
   Verson: "ভার্সন - ৫.০.৪",
+
+  //! Main Manu
+  Inbox: "ইনবক্স",
+  Help: "হেল্প",
+  AddCustomer: "কাস্টমার যোগ করি",
 };

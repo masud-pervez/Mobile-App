@@ -10,8 +10,6 @@ const { CashBox_Tab, Drawer, Wallet_Tab, TalyBook_TAB } = routes;
 import { HeaderTitle, HeaderLogo } from "../Components/header";
 import StackNavigator from "./StackNavigator";
 
-
-
 export default function TabNavigator({ navigation }) {
   const Tab = createBottomTabNavigator();
   return (
@@ -54,7 +52,11 @@ export default function TabNavigator({ navigation }) {
       <Tab.Screen name={routes.TalyBook_TAB} component={Talybook} />
       <Tab.Screen name={routes.CashBox_Tab} component={CashBox} />
       <Tab.Screen name={routes.Wallet_Tab} component={Wallet} />
-      <Tab.Screen name={routes.Drawer} component={StackNavigator} />
+      <Tab.Screen
+        // options={{ headerShown: false, tabBarVisibilityAnimationConfig: false }}
+        name={routes.Drawer}
+        component={Talybook}
+      />
     </Tab.Navigator>
   );
 }
