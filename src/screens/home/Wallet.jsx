@@ -32,6 +32,7 @@ export default function Wallet() {
       >
         <View>
           <LogoTaly width={130} height={70} />
+          
         </View>
         <View>
           <Text>একাউন্ট ব্যালেন্স</Text>
